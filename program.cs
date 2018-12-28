@@ -21,7 +21,7 @@ namespace ConsoleApp1
         {
             using (var client = new HttpClient())
             {
-
+                client.Timeout = Timeout.InfiniteTimeSpan;
                 using (var result = await client.GetAsync(url))
                 {
                     if (result.IsSuccessStatusCode)
