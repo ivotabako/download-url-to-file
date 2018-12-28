@@ -11,7 +11,7 @@ namespace ConsoleApp1
         {
             for (int i = 1; i < 202; i++)
             {
-                var bytes = DownloadFile($"https://vs1.coursehunters.net/mosh-react-mastering/lesson{i}.mp4").GetAwaiter().GetResult();
+                var bytes = DownloadFile($"https://vs1.coursehunters.net/coursename/lesson{i}.mp4").GetAwaiter().GetResult();
                 File.WriteAllBytes($"C:\\mosh\\lesson{i}.mp4", bytes);
             }
         }
